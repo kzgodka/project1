@@ -1,0 +1,574 @@
+* {
+	box-sizing: border-box;	
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+
+body {
+	margin: 0;	
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row:before, 
+.row:after {
+	content:"";
+	display: table;
+	clear: both;
+}
+
+header > nav {
+  z-index: 100;
+}
+
+header > nav img {
+  padding: 25px 0;
+}
+
+header > nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+
+header > nav ul > li {
+  display: inline-block;
+}
+
+header > nav ul > li:hover{
+  background: gray;
+}
+
+header > nav ul > li > a {
+  line-height: 80px;
+  display: block;
+  padding: 0 20px;
+  color:  #FFF;
+  text-decoration: none;
+}
+
+.hero {
+  margin-top: -85px;
+  width: 100%;
+  background-image: url("https://static.pexels.com/photos/314548/pexels-photo-314548.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.slogan {
+  padding: 200px 0 200px 0;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.slogan h3 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.slogan h1 {
+  font-size: 40px;
+}
+
+.space {
+  letter-spacing: 10px;
+}
+
+.slogan button {
+  padding: 12px 25px;
+  border: 2px solid #FFF;
+  background: none;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.slogan button:hover {
+  background: gray;
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  padding: 12px;
+}
+
+section > .container {
+  padding: 50px 0;
+}
+
+.products .products-header {
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.products .products-header::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: red;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.products .products-header::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.products img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+
+.products .effect-bubba {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.products .effect-bubba img {
+	position: relative;
+	display: block;
+  opacity: 1;
+}
+
+.products .effect-bubba figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.products .effect-bubba figcaption::before,
+.products .effect-bubba figcaption::after {
+	pointer-events: none;
+}
+
+.products .effect-bubba figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.products .effect-bubba h2 {
+	font-weight: 300;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.products .effect-bubba h2,
+.products .effect-bubba p {
+	margin: 0;
+}
+
+.effect-bubba img {
+  opacity: .7; 
+  -webkit-transition: opacity .35s;
+  transition: opacity .35s;
+}
+
+.effect-bubba:hover img {
+  opacity: .4;
+}
+
+.effect-bubba figcaption::before,
+.effect-bubba figcaption::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, transform .35s;
+}
+
+.effect-bubba figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+.effect-bubba figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+}
+
+.effect-bubba h2 {
+  padding-top: 30%;
+  -webkit-transition: -webkit-transform .35s;
+  transition: transform .35s;
+  -webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+  visibility: hidden;
+}
+
+.effect-bubba:hover figcaption::before,
+.effect-bubba:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.effect-bubba:hover h2 {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+  visibility: visible;
+}
+
+.products h2 {
+  text-align: center;
+}
+
+.products .effect-sarah {
+  position: relative;
+	display: block;
+}
+
+.products .effect-sarah figcaption {
+	display: flex;
+  position: absolute;
+	top: 0;
+	left: 0;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.products .effect-sarah h2 {
+	display: inline-block;
+	position: relative;
+  color: white;
+  visibility: hidden;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.products .effect-sarah h2:before {
+	content: '';
+	display: block;
+	margin: 10px auto;
+	height: 1px;
+	width: 0;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+  
+}
+
+.products .effect-sarah h2:after {
+	content: '';
+	display: block;
+	margin: 10px auto;
+	height: 1px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+  
+}
+
+.products .effect-sarah:hover h2:after {
+	width: 60%;
+	background: white;
+  
+}
+
+.products .effect-sarah:hover h2:before {
+	width: 60%;
+	background: white;
+  
+}
+
+.products .effect-sarah:hover h2 {
+  visibility: visible;
+  opacity: 1;
+
+}
+
+.products .effect-sarah figcaption:hover {
+  background: rgba(0, 0, 0, .5);
+  transition: .5s;
+  
+}
+
+.bgr {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  background-color: #616161;
+  z-index: -1;
+  
+}
+.bgr__canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.trending {
+  position: relative;
+}
+
+.trending .trending-header {
+  text-align: center;
+  position: relative;
+  padding: 25px 0;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.trending .trending-header::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: red;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.trending .trending-header:first-child::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.trending img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.trending .text {
+  text-align: left;
+}
+
+.trending h3 {
+  text-transform: uppercase;
+  color: darkred;
+}
+
+.trending button {
+  background-color: none;
+  border: 1px solid gray;
+ 
+}
+
+.trending button:hover {
+  background-color: black;
+  color: white;
+}
+
+.trending p {
+  text-transform: capitalize;
+  font-size: 12px;
+  color: gray;
+}
+
+.trending .buttons-size button {
+  width: 50px;
+  height: 30px;
+  margin: 10px 5px 5px 0;
+  cursor: pointer;
+}
+
+.trending .buttons-shop button {
+  width: 111px;
+  height: 30px;
+  margin: 10px 5px 5px 0;
+  cursor: pointer;
+}
+
+.blog .blog-header {
+  text-align: center;
+  position: relative;
+  padding: 25px 0;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.blog .blog-header::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: red;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.blog .blog-header:first-child::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.blog img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+
+.blog h4 {
+  text-transform: uppercase;
+  color: red;
+}
+
+.blog p {
+  text-transform: capitalize;
+  font-size: 12px;
+  border-bottom: 1px solid lightgrey;
+  color: gray;
+  padding-bottom: 15px;
+}
+
+
+.blog .some-text {
+  color: lightgray;
+}
+
+.blog button {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid gray;
+  font-weight: bold;
+}
+
+.blog button:hover {
+  cursor: pointer;
+  background: lightgray;
+}
+
+.subscribe {
+  background-image: url("https://static.pexels.com/photos/235509/pexels-photo-235509.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe .cover {
+  background: rgba(0, 0, 0, .5);
+  padding: 50px 0;
+}
+
+.subscribe h5 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+
+.subscribe button {
+  text-transform: uppercase;
+  padding: 10px 60px;
+  background: white;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subscribe input {
+  border: 2px solid white;
+  margin: 0;
+  padding: 10px 0;
+  width: 80%;
+  background: none;
+  color: white;
+  
+}
+
+input:focus {
+  background-color: white;
+  border: 2px solid grey;
+  outline: none;
+  color: black;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+}
+
+footer i {
+  color: red;
+}
