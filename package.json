@@ -1,0 +1,29 @@
+{
+  "name": "kodilla-project1",
+  "version": "1.0.0",
+  "description": "first project with grunt",
+  "main": "script.js",
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzgodka/project1.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Kamil Zgodka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kzgodka/project1/issues"
+  },
+  "homepage": "https://github.com/kzgodka/project1#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
