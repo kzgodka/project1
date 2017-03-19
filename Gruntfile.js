@@ -39,7 +39,7 @@ module.exports = function(grunt) {
             options: {
                     watchTask: true,
                     server: "./",
-                    browser: "chrome"
+                    browser: "google chrome"
             }
         },
   });
