@@ -44,6 +44,10 @@ body {
 	clear: both;
 }
 
+button {
+  outline: none;
+}
+
 header > nav {
   z-index: 100;
 }
@@ -61,6 +65,7 @@ header > nav ul {
 
 header > nav ul > li {
   display: inline-block;
+  padding: 0 15px;
 }
 
 header > nav ul > li:hover{
@@ -73,30 +78,34 @@ header > nav ul > li > a {
   padding: 0 20px;
   color:  #FFF;
   text-decoration: none;
+  font-weight: 100;
 }
 
 .hero {
   margin-top: -85px;
   width: 100%;
-  background-image: url("https://static.pexels.com/photos/314548/pexels-photo-314548.jpeg");
-  background-size: cover;
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
   background-position: center;
+  max-height: 930px;
 }
 
 .slogan {
-  padding: 200px 0 200px 0;
+  padding: 25vh 0 25vh 0;
   color: #FFF;
   text-align: center;
   text-transform: uppercase;
 }
 
 .slogan h3 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 100;
+  margin: 15px 0;
 }
 
 .slogan h1 {
-  font-size: 40px;
+  font-size: 55px;
+  margin: 40px 0;
 }
 
 .space {
@@ -104,7 +113,7 @@ header > nav ul > li > a {
 }
 
 .slogan button {
-  padding: 12px 25px;
+  padding: 15px 50px;
   border: 2px solid #FFF;
   background: none;
   color: #FFF;
@@ -112,11 +121,13 @@ header > nav ul > li > a {
   font-weight: bold;
   border-radius: 5%;
   cursor: pointer;
+  margin: 15px 0;
 }
 
 .slogan button:hover {
   background: gray;
 }
+
 
 [class*="col-"] {
   float: left;
@@ -124,8 +135,8 @@ header > nav ul > li > a {
   padding: 12px;
 }
 
-section > .container {
-  padding: 50px 0;
+.products .container {
+  padding: 60px 0;
 }
 
 .products .products-header {
@@ -134,6 +145,7 @@ section > .container {
   padding: 20px;
   text-transform: capitalize;
   font-style: italic;
+  font-weight: 100;
 }
 
 .products .products-header::before {
@@ -163,7 +175,7 @@ section > .container {
 .products img {
   width: 100%;
   display: block;
-  height: 300px;
+  height: 420px;
   object-fit: cover;
 }
 
@@ -254,7 +266,7 @@ section > .container {
 }
 
 .effect-bubba h2 {
-  padding-top: 30%;
+  padding-top: 50%;
   -webkit-transition: -webkit-transform .35s;
   transition: transform .35s;
   -webkit-transform: translate3d(0,-20px,0);
@@ -278,6 +290,12 @@ section > .container {
 
 .products h2 {
   text-align: center;
+  margin: 0;
+  
+}
+
+.space-bottom {
+  padding-bottom: 60px;
 }
 
 .products .effect-sarah {
@@ -355,7 +373,7 @@ section > .container {
 .bgr {
   position: absolute;
   width: 100%;
-  height: 700px;
+  height: 920px;
   background-color: #616161;
   z-index: -1;
   
@@ -365,8 +383,13 @@ section > .container {
   height: 100%;
 }
 
+.trending .container {
+  padding: 60px 0;
+}
+
 .trending {
   position: relative;
+  height: 920px;
 }
 
 .trending .trending-header {
@@ -375,13 +398,14 @@ section > .container {
   padding: 25px 0;
   text-transform: capitalize;
   font-style: italic;
+  font-weight: 100;
 }
 
 .trending .trending-header::before {
     content: '';
     position: absolute;
     width: 100px;
-    height: 4px;
+    height: 2px;
     background: red;
     bottom: 0;
     left: 0;
@@ -393,7 +417,7 @@ section > .container {
     content: '';
     position: absolute;
     width: 100px;
-    height: 4px;
+    height: 2px;
     background: red;
     top: 0;
     left: 0;
@@ -403,23 +427,31 @@ section > .container {
 
 .trending img {
   width: 100%;
+  height: 100%;
   display: block;
   object-fit: cover;
+  float: right;
 }
 
 .trending .text {
   text-align: left;
 }
 
+.trending h2 {
+  margin: 0;
+}
+
 .trending h3 {
   text-transform: uppercase;
   color: darkred;
+  font-size: 30px;
 }
 
 .trending button {
   background-color: none;
   border: 1px solid gray;
- 
+  margin: 0 30px 30px 0;
+  padding: 0;
 }
 
 .trending button:hover {
@@ -429,22 +461,33 @@ section > .container {
 
 .trending p {
   text-transform: capitalize;
-  font-size: 12px;
+  font-size: 18px;
   color: gray;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+}
+
+.trending p:first-of-type {
+
 }
 
 .trending .buttons-size button {
-  width: 50px;
-  height: 30px;
-  margin: 10px 5px 5px 0;
+  width: 70px;
+  height: 50px;
   cursor: pointer;
+  float: left;
+  margin-top: 90px;
 }
 
 .trending .buttons-shop button {
-  width: 111px;
-  height: 30px;
-  margin: 10px 5px 5px 0;
+  width: 170px;
+  height: 50px;
   cursor: pointer;
+  float: left;
+}
+
+.blog .container {
+  padding: 60px 0;
 }
 
 .blog .blog-header {
@@ -453,13 +496,14 @@ section > .container {
   padding: 25px 0;
   text-transform: capitalize;
   font-style: italic;
+  font-weight: 100;
 }
 
 .blog .blog-header::before {
     content: '';
     position: absolute;
     width: 100px;
-    height: 4px;
+    height: 2px;
     background: red;
     bottom: 0;
     left: 0;
@@ -471,7 +515,7 @@ section > .container {
     content: '';
     position: absolute;
     width: 100px;
-    height: 4px;
+    height: 2px;
     background: red;
     top: 0;
     left: 0;
@@ -480,9 +524,9 @@ section > .container {
 }
 
 .blog img {
-  width: 100%;
+  width: 570px;
   display: block;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -510,6 +554,7 @@ section > .container {
   background: none;
   border: 1px solid gray;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .blog button:hover {
@@ -517,17 +562,17 @@ section > .container {
   background: lightgray;
 }
 
+.subscribe .container {
+  padding: 60px 0;
+}
+
 .subscribe {
-  background-image: url("https://static.pexels.com/photos/235509/pexels-photo-235509.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("../images/subscribe.jpg");
   background-size: cover;
 }
 
 .subscribe .cover {
   background: rgba(0, 0, 0, .5);
-  padding: 50px 0;
 }
 
 .subscribe h5 {
@@ -547,21 +592,36 @@ section > .container {
   cursor: pointer;
 }
 
+.subscribe button:hover {
+  background-color: silver;
+}
+
 .subscribe input {
   border: 2px solid white;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 0 10px 50px;
   width: 80%;
   background: none;
   color: white;
-  
+}
+
+.subscribe .input-container {
+  position: relative;
+}
+
+.subscribe i {
+  color: #FFF;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  bottom: 5px;
 }
 
 input:focus {
-  background-color: white;
   border: 2px solid grey;
   outline: none;
-  color: black;
+  color: white;
+  font-weight: 600;
 }
 
 footer {
