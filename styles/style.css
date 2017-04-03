@@ -49,7 +49,7 @@ button {
 }
 
 header > nav {
-  z-index: 100;
+  z-index: 10000;
 }
 
 header > nav img {
@@ -88,6 +88,7 @@ header > nav ul > li > a {
   background-repeat: no-repeat;
   background-position: center;
   max-height: 930px;
+  z-index: 10;
 }
 
 .slogan {
@@ -567,7 +568,7 @@ header > nav ul > li > a {
 }
 
 .subscribe {
-  background-image: url("../images/subscribe.jpg");
+  background-image: url("../images/build/subscribe.jpg");
   background-size: cover;
 }
 
